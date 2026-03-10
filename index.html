@@ -1,1 +1,448 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio GITA OKTAVIANI | Ramen Lover</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Zilla+Slab:wght@700&display=swap" rel="stylesheet">
+    <!-- Font Awesome untuk Ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #fdf6e4; /* Krem Pastel */
+            --primary-brown: #8d7b68; /* Cokelat Ramen */
+            --soft-brown: #c1a386; /* Cokelat Muda */
+            --accent-red: #d9534f; /* Merah Norimaki */
+            --egg-yellow: #f4d03f; /* Kuning Telur */
+            --white: #ffffff;
+            --text-dark: #4a3f35;
+        }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Navigasi */
+        nav {
+            background-color: var(--white);
+            padding: 1rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(141, 123, 104, 0.1);
+        }
+
+        .logo {
+            font-family: 'Zilla Slab', serif;
+            font-size: 1.8rem;
+            color: var(--primary-brown);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            transition: 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-red);
+        }
+
+        /* Kontainer Utama */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 120px 20px 50px;
+        }
+
+        section {
+            margin-bottom: 80px;
+            scroll-margin-top: 100px;
+        }
+
+        h2 {
+            font-family: 'Zilla Slab', serif;
+            font-size: 2.2rem;
+            color: var(--primary-brown);
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        h2::after {
+            content: '🍜';
+            display: block;
+            font-size: 1.2rem;
+            margin-top: 5px;
+        }
+
+        /* 1. Beranda */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 20px;
+        }
+
+        .profile-wrapper {
+            position: relative;
+            width: 220px;
+            height: 220px;
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 8px solid var(--white);
+            object-fit: cover;
+            box-shadow: 0 10px 20px rgba(141, 123, 104, 0.2);
+            background-color: #eee;
+        }
+
+        .hero h1 {
+            font-family: 'Zilla Slab', serif;
+            font-size: 3rem;
+            color: var(--primary-brown);
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            color: var(--soft-brown);
+            font-weight: 600;
+        }
+
+        /* Card Style */
+        .card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(141, 123, 104, 0.05);
+            border: 2px solid #f1e9d2;
+        }
+
+        .edu-item {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            border-left: 4px solid var(--egg-yellow);
+        }
+
+        .edu-year {
+            font-weight: 700;
+            color: var(--accent-red);
+            display: block;
+        }
+
+        /* Keahlian Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            transition: transform 0.3s;
+            border: 1px solid #f1e9d2;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(141, 123, 104, 0.1);
+        }
+
+        .skill-icon {
+            font-size: 2.5rem;
+            color: var(--primary-brown);
+            width: 60px;
+            text-align: center;
+        }
+
+        .skill-info h4 {
+            margin-bottom: 5px;
+            font-family: 'Zilla Slab', serif;
+            font-size: 1.3rem;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .bg-pro { background: #d4edda; color: #155724; }
+
+        /* Kontak */
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .contact-btn {
+            background: var(--white);
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            color: var(--primary-brown);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 5px 15px rgba(141, 123, 104, 0.1);
+            transition: 0.3s;
+        }
+
+        .contact-btn:hover {
+            background: var(--primary-brown);
+            color: var(--white);
+            transform: scale(1.05);
+        }
+
+        /* Testimonial */
+        .testi-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .testi-form input, .testi-form textarea {
+            width: 100%;
+            padding: 15px;
+            border-radius: 15px;
+            border: 2px solid #f1e9d2;
+            font-family: inherit;
+            outline: none;
+        }
+
+        .testi-form button {
+            background: var(--accent-red);
+            color: var(--white);
+            border: none;
+            padding: 15px;
+            border-radius: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .testi-form button:hover {
+            background: #b52b27;
+        }
+
+        .comments-container {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .comment-bubble {
+            background: #fdfaf0;
+            padding: 15px;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            border-left: 5px solid var(--soft-brown);
+        }
+
+        .comment-name {
+            font-weight: 700;
+            color: var(--primary-brown);
+            font-size: 0.9rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: var(--soft-brown);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <i class="fas fa-bowl-food"></i> GITA OKTAVIANI
+        </div>
+        <div class="nav-links">
+            <a href="#home">Beranda</a>
+            <a href="#about">Tentang</a>
+            <a href="#education">Pendidikan</a>
+            <a href="#skills">Keahlian</a>
+            <a href="#contact">Kontak</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        
+        <!-- 1. Beranda -->
+        <section id="home" class="hero">
+            <div class="profile-wrapper">
+                <!-- Foto profil diperbarui dengan link yang diberikan -->
+                <img src="https://simangu.smksalirsyad-hgl.sch.id/apimangu/uploads/siswa/232410048/1773109829_fd0f069f.jpg" alt="Foto Profil GITA OKTAVIANI" class="profile-img">
+            </div>
+            <h1>GITA OKTAVIANI</h1>
+            <p>Siswa SMK yang antusias dengan akuntansi dan penyuka semangkuk ramen hangat.</p>
+        </section>
+
+        <!-- 2. Tentang Diri -->
+        <section id="about">
+            <h2>Tentang Diri</h2>
+            <div class="card">
+                <p>Halo! Saya <strong>GITA OKTAVIANI</strong> lahir pada tahun 2007. Saat ini saya sedang menempuh pendidikan di SMK Al Irsyad Al Islamiyyah. Saya adalah pribadi yang teliti dalam mengelola angka dan ceria dalam keseharian. Bagi saya, menyusun laporan keuangan sama menantangnya dengan menemukan resep ramen yang sempurna.</p>
+            </div>
+        </section>
+
+        <!-- 3. Riwayat Pendidikan -->
+        <section id="education">
+            <h2>Riwayat Pendidikan</h2>
+            <div class="card">
+                <div class="edu-item">
+                    <span class="edu-year">2014 - 2020</span>
+                    <strong>SD NEGERI 3 KEDUNGWUNG</strong>
+                </div>
+                <div class="edu-item">
+                    <span class="edu-year">2020 - 2023</span>
+                    <strong>SMP NEGERI 2 ANJATAN</strong>
+                </div>
+                <div class="edu-item">
+                    <span class="edu-year">2023 - 2026</span>
+                    <strong>SMK AL IRSYAD AL ISLAMIYYAH</strong>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Keahlian -->
+        <section id="skills">
+            <h2>Keahlian Utama</h2>
+            <div class="skills-grid">
+                <!-- Keahlian Akuntansi -->
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-calculator"></i></div>
+                    <div class="skill-info">
+                        <h4>Bisa Akuntansi</h4>
+                        <span class="badge bg-pro">Keahlian Inti</span>
+                    </div>
+                </div>
+                <!-- Keahlian Memasak -->
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-utensils"></i></div>
+                    <div class="skill-info">
+                        <h4>Pandai Memasak</h4>
+                        <span class="badge bg-pro">Keahlian Hobi</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Kontak -->
+        <section id="contact">
+            <h2>Hubungi Saya</h2>
+            <div class="contact-container">
+                <a href="mailto:gitaoktaviani@email.com" class="contact-btn">
+                    <i class="fas fa-envelope"></i> Email Saya
+                </a>
+                <a href="https://instagram.com" target="_blank" class="contact-btn">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+                <a href="https://wa.me/628316023" target="_blank" class="contact-btn">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
+        </section>
+
+        <!-- 6. Testimonial -->
+        <section id="testimonials">
+            <h2>Testimonial Tamu</h2>
+            <div class="card">
+                <form class="testi-form" id="testiForm">
+                    <input type="text" id="guestName" placeholder="Masukkan nama Anda..." required>
+                    <textarea id="guestComment" rows="3" placeholder="Tuliskan komentar atau pesan..." required></textarea>
+                    <button type="submit">Kirim Testimoni</button>
+                </form>
+
+                <div class="comments-container" id="commentsContainer">
+                    <div class="comment-bubble">
+                        <p class="comment-name">Rekan Belajar</p>
+                        <p>"GITA sangat teliti kalau soal hitung-hitungan akuntansi. Sangat membantu!"</p>
+                    </div>
+                    <div class="comment-bubble">
+                        <p class="comment-name">Sahabat</p>
+                        <p>"Masakan ramen buatannya benar-benar juara!"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 GITA OKTAVIANI. Terinspirasi oleh 🍜 dan Akuntansi.</p>
+    </footer>
+
+    <script>
+        const testiForm = document.getElementById('testiForm');
+        const commentsContainer = document.getElementById('commentsContainer');
+
+        testiForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('guestName').value;
+            const comment = document.getElementById('guestComment').value;
+
+            const newComment = document.createElement('div');
+            newComment.className = 'comment-bubble';
+            newComment.innerHTML = `
+                <p class="comment-name">${name}</p>
+                <p>"${comment}"</p>
+            `;
+
+            commentsContainer.insertBefore(newComment, commentsContainer.firstChild);
+            testiForm.reset();
+        });
+    </script>
+</body>
+  </html>
